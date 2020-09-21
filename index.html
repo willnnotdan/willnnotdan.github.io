@@ -8,9 +8,7 @@
 
 			// Get the Feed
 		  	async function getFeed(source){
-				let r = fetch(source, {
-					mode: 'no-cors'
-				})
+				let r = fetch(source)
 				  .then(response => response.text())
 				  .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
 				  .catch((err) => {
