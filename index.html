@@ -12,6 +12,7 @@
 				  .then(response => response.text())
 				  .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
 				  .catch((err) => {
+				  	alert(err.message);
 	        		console.log(err.message);
 	      		});
 	      		return await r;
