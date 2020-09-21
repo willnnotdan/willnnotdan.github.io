@@ -9,7 +9,10 @@
 			// Get the Feed
 		  	async function getFeed(source){
 				let r = fetch(source, {
-					mode: "no-cors"
+					headers: {
+						"Access-Control-Allow-Origin": "*",
+						"Access-Control-Allow-Headers": "*"
+					}
 				})
 				  .then(response => response.text())
 				  .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
@@ -25,7 +28,7 @@
 		  		console.log(feedArray.toString());
 	  			const items = feedArray.querySelectorAll("item");
 	  			console.log(items);
-			    var i = 1; 
+			    var i = 1;
 			    for (const each of items) {
 			    	// Set text
 			    	var title = await each.querySelector("title").innerHTML;
