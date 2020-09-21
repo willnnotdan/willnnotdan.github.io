@@ -19,7 +19,7 @@
 
 		  	// Update the text items with the stories and links
 		  	async function buildStories(){
-		  		const feedArray = await getFeed('https://codepen.io/picks/feed/');
+		  		const feedArray = await getFeed('https://www.ubs.com/global/en/media/_jcr_content/mainpar/toplevelgrid_1664602674/col1/searchdrivenactivity_1097886631.rss.xml');
 	  			const items = feedArray.querySelectorAll("item");
 			    var i = 1; 
 			    for (const each of items) {
